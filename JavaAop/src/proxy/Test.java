@@ -7,4 +7,9 @@ package proxy;
  * @Modified By：
  */
 public class Test {
+    public static void main(String[] args) {
+        DogImpl dogImpl = new DogImpl();
+        System.out.println(dogImpl.getName());
+        dogImpl.getProperty();
+    }
 }

@@ -1,5 +1,7 @@
 package proxy;
 
+import proxy.impl.AnimalInterface;
+
 /**
  * @Author: alan.peng
  * @Description:
@@ -7,4 +9,8 @@ package proxy;
  * @Modified By：
  */
 public class AopTest {
+
+    public static void main(String[] args) {
+        AnimalInterface dog = AnimalInterface
+    }
 }
