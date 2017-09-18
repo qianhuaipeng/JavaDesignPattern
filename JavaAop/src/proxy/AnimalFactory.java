@@ -22,5 +22,29 @@ public class AnimalFactory {
         return (T) getAnimalBase(obj,method);
     }
 
-    public static <T> T
+    public static <T> T getAnimal(String className, AopMethod method){
+        Object obj = null;
+        try {
+            obj = getAnimalBase(Class.forName(className).newInstance(),method);
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return (T) obj;
+    }
+
+    public static <T> T getAnimal(Class<T> clz, AopMethod method){
+        Object obj = null;
+        try {
+            obj = getAnimalBase(clz.newInstance(),method);
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return (T) obj;
+    }
 }

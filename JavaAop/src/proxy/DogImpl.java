@@ -35,7 +35,7 @@ public class DogImpl implements AnimalInterface{
     }
 
     @Override
-    @Seven(Property = "陆栖")
+    @Seven(Property = "陆栖test")
     public void setProperty(String property) {
         this.property = property;
     }

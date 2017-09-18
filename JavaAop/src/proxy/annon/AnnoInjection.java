@@ -22,8 +22,7 @@ public class AnnoInjection {
                 Seven s = ff.getAnnotation(Seven.class);
                 if (s != null) {
                     System.out.println("注入" + ff.getName() + "\t\t" + s.value());
-                    // 反射调用public set方法,如果为访问级别private,那么可以直接使用属性的set(obj,
-                    // value);
+                    // 反射调用public set方法,如果为访问级别private,那么可以直接使用属性的set(obj, value);
                     object.getClass().getMethod("set"+ff.getName().substring(0,1).toUpperCase()+ff.getName().substring(1),
                             new Class<?>[]{String.class}).invoke(object,s.value());
 
